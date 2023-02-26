@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;700&family=League+Spartan:wght@400;500;700&display=swap");
+.PlanetPage .PageNavBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.PlanetPage .PageNavBar div {
+  font-family: "League Spartan", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.5625rem;
+  line-height: 0.625rem;
+  text-align: center;
+  letter-spacing: 0.1205rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 1.25rem 0 0 0;
+  padding-bottom: 1rem;
+}
+.PlanetPage .PageNavBar .ActiveInfo {
+  border-bottom: 4px solid #419EBB;
+}
+.PlanetPage hr {
+  background: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.2;
+}
+.PlanetPage .Content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.PlanetPage .Content .PlanetImage {
+  width: 6.9375rem;
+  height: 6.9375rem;
+  margin-top: 5.9375rem;
+  margin-bottom: 6.125rem;
+}
+.PlanetPage .Content .PlanetSurfaceImage {
+  width: 3.875rem;
+  position: absolute;
+  top: 11.5rem;
+}
+.PlanetPage .Content h1 {
+  font-family: "Antonio", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+.PlanetPage .Content p {
+  font-family: "League Spartan", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 2rem;
+}
+.PlanetPage .Content .Source {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.75rem;
+}
+.PlanetPage .Content .Source span {
+  font-family: "League Spartan", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-right: 0.25rem;
+}
+.PlanetPage .Content .Source a {
+  font-family: "League Spartan", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-right: 0.25rem;
+}
+.PlanetPage .Content .Source img {
+  width: 0.75rem;
+}
+.PlanetPage .BasicData {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.PlanetPage .BasicData .Rotation, .PlanetPage .BasicData .Revolution, .PlanetPage .BasicData .Radius, .PlanetPage .BasicData .Temp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5625rem 1.5rem 0.8125rem 1.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.PlanetPage .BasicData .Rotation span, .PlanetPage .BasicData .Revolution span, .PlanetPage .BasicData .Radius span, .PlanetPage .BasicData .Temp span {
+  font-family: "League Spartan", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.625rem;
+  letter-spacing: 0.0455rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-top: 9px;
+}
+.PlanetPage .BasicData .Rotation strong, .PlanetPage .BasicData .Revolution strong, .PlanetPage .BasicData .Radius strong, .PlanetPage .BasicData .Temp strong {
+  font-family: "Antonio", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.625rem;
+  text-align: right;
+  letter-spacing: -0.0469rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}/*# sourceMappingURL=PlanetPage.css.map */

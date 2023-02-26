@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Data from './data.json';
+// component imports
+import NavBar from './components/NavBar';
+import Menu from './components/Menu';
+import PlanetPage from './components/PlanetPage';
 
 function App() {
+
+  // States
+  const [MenuIsOpen, setMenuIsOpen] = useState(false);
+  const [PlanetIndex, setPlanetIndex] = useState(0);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <NavBar MenuIsOpen={ MenuIsOpen } setMenuIsOpen={ setMenuIsOpen }/>
+        <Menu MenuIsOpen={ MenuIsOpen } setPlanetIndex={ setPlanetIndex } setMenuIsOpen={ setMenuIsOpen }/>
+        <PlanetPage Data={ Data[PlanetIndex] }/>
     </div>
   );
 }

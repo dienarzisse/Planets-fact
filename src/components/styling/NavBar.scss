@@ -1,0 +1,33 @@
+@import './variables';
+
+.NavBar{
+    .NarBarConetent{
+        margin: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .Logo{
+            font-family: $font-Antonio;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.75rem;
+            line-height: 2.25rem;
+            letter-spacing: -0.0656rem;
+            text-transform: uppercase;
+            color: $white;
+        }
+        img{
+            mix-blend-mode: normal;
+            opacity: 0.25;
+            cursor: pointer;
+        }
+        .MenuOpen{
+            opacity: 1;
+        }
+    }
+    hr{
+        background: #FFFFFF;
+        mix-blend-mode: normal;
+        opacity: 0.2;
+    }
+}

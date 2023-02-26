@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;700&family=League+Spartan:wght@400;500;700&display=swap");
+.MenuPlanet .MenuWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.MenuPlanet .MenuWrapper .MenuContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.MenuPlanet .MenuWrapper .MenuContent .PlanetIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 999rem;
+  margin-right: 1.5625rem;
+}
+.MenuPlanet .MenuWrapper .MenuContent .PlanetName {
+  font-family: "Antonio", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  text-align: center;
+  letter-spacing: 0.0852rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.MenuPlanet .MenuWrapper img {
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  margin-right: 0.5rem;
+}
+.MenuPlanet hr {
+  background: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.1;
+  margin: 1.25rem 0;
+}/*# sourceMappingURL=MenuPlanet.css.map */

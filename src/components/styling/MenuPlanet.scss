@@ -1,0 +1,42 @@
+@import "./variables";
+.MenuPlanet{
+    .MenuWrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .MenuContent{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .PlanetIcon{
+                width: 1.25rem;
+                height: 1.25rem;
+                border-radius: 999rem;
+                margin-right: 1.5625rem;
+            }
+            .PlanetName{
+                font-family: $font-Antonio;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 0.9375rem;
+                line-height: 1.5625rem;
+                text-align: center;
+                letter-spacing: 0.0852rem;
+                text-transform: uppercase;
+                color: $white;
+            }
+        }
+        img{
+            mix-blend-mode: normal;
+            opacity: 0.4;
+            margin-right: 0.5rem;
+        }
+    }
+    hr{
+        background: $white;
+        mix-blend-mode: normal;
+        opacity: 0.1;
+        margin: 1.25rem 0;
+    }
+}
