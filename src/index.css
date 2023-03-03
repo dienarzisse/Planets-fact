@@ -6,4 +6,7 @@
 body{
   background-color: #070724;
   background-image: url('./assets/background-stars.svg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

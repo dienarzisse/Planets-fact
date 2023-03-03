@@ -1,11 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;700&family=League+Spartan:wght@400;500;700&display=swap");
+.PlanetPage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .PlanetPage .PageNavBar {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.PlanetPage .PageNavBar div {
+.PlanetPage .PageNavBar li {
+  list-style-type: none;
   font-family: "League Spartan", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -22,29 +31,23 @@
   border-bottom: 4px solid #419EBB;
 }
 .PlanetPage hr {
+  width: 100%;
   background: #FFFFFF;
   mix-blend-mode: normal;
   opacity: 0.2;
 }
-.PlanetPage .Content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.PlanetPage .Content .PlanetImage {
+.PlanetPage .PlanetImage {
   width: 6.9375rem;
   height: 6.9375rem;
   margin-top: 5.9375rem;
   margin-bottom: 6.125rem;
 }
-.PlanetPage .Content .PlanetSurfaceImage {
+.PlanetPage .PlanetSurfaceImage {
   width: 3.875rem;
   position: absolute;
-  top: 11.5rem;
+  top: 14.5rem;
 }
-.PlanetPage .Content h1 {
+.PlanetPage h1 {
   font-family: "Antonio", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -55,7 +58,7 @@
   color: #FFFFFF;
   margin-bottom: 1rem;
 }
-.PlanetPage .Content p {
+.PlanetPage p {
   font-family: "League Spartan", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -65,14 +68,14 @@
   color: #FFFFFF;
   margin-bottom: 2rem;
 }
-.PlanetPage .Content .Source {
+.PlanetPage .Source {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-bottom: 1.75rem;
 }
-.PlanetPage .Content .Source span {
+.PlanetPage .Source span {
   font-family: "League Spartan", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -83,7 +86,7 @@
   opacity: 0.5;
   margin-right: 0.25rem;
 }
-.PlanetPage .Content .Source a {
+.PlanetPage .Source a {
   font-family: "League Spartan", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -94,7 +97,7 @@
   opacity: 0.5;
   margin-right: 0.25rem;
 }
-.PlanetPage .Content .Source img {
+.PlanetPage .Source img {
   width: 0.75rem;
 }
 .PlanetPage .BasicData {
@@ -133,4 +136,167 @@
   letter-spacing: -0.0469rem;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+
+@media screen and (min-width: 768px) {
+  .PlanetPage {
+    display: grid;
+    justify-content: space-between;
+    row-gap: 0;
+    grid-template-areas: "img img" "desc  nav" "facts  facts";
+  }
+  .PlanetPage hr {
+    display: none;
+  }
+  .PlanetPage .PageNavBar {
+    display: flex;
+    flex-direction: column;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-right: 0;
+    margin-top: 8rem;
+    grid-area: nav;
+    counter-reset: item;
+    list-style-type: none;
+  }
+  .PlanetPage .PageNavBar li {
+    width: 17.5625rem;
+    padding: 1.25rem 0;
+    text-align: left;
+    mix-blend-mode: normal;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .PlanetPage .PageNavBar li:before {
+    content: "0" counter(item) "  ";
+    counter-increment: item;
+    margin-left: 1.25rem;
+    margin-right: 1rem;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+  .PlanetPage .PageNavBar .ActiveInfo {
+    border: 1px solid transparent;
+    background-color: #419EBB;
+  }
+  .PlanetPage .PlanetImage {
+    margin-top: 9.125rem;
+    margin-bottom: 0;
+    width: 11.5rem;
+    height: 11.5rem;
+    transform: translateX(17rem);
+    grid-area: img;
+  }
+  .PlanetPage .PlanetSurfaceImage {
+    width: 3.875rem;
+    position: absolute;
+    top: 18.5rem;
+    transform: translateX(20.5rem);
+  }
+  .PlanetPage .Desc {
+    grid-area: desc;
+    margin-top: 8.125rem;
+    text-align: left;
+    margin-top: 8.125rem;
+    margin-right: 4.3125rem;
+  }
+  .PlanetPage .Desc h1 {
+    text-align: left;
+    font-size: 3rem;
+    line-height: 3.875rem;
+    margin-bottom: 1.5rem;
+  }
+  .PlanetPage .Desc p {
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.375rem;
+  }
+  .PlanetPage .Desc .Source {
+    justify-content: flex-start;
+  }
+  .PlanetPage .BasicData {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    grid-area: facts;
+    margin-top: 1.625rem;
+  }
+  .PlanetPage .BasicData .Rotation, .PlanetPage .BasicData .Revolution, .PlanetPage .BasicData .Radius, .PlanetPage .BasicData .Temp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0;
+    width: 10.25rem;
+    height: 5.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .PlanetPage {
+    min-width: 1110px;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: grid;
+    grid-template: 1fr 1fr 1fr;
+    justify-content: space-between;
+    grid-template-areas: "img img desc " "img  img nav" "facts facts facts";
+  }
+  .PlanetPage .PageNavBar {
+    grid-area: nav;
+    justify-self: end;
+    margin-right: -4.5rem;
+    margin-top: 0;
+  }
+  .PlanetPage .PageNavBar li {
+    width: 21.875rem;
+    cursor: pointer;
+  }
+  .PlanetPage .PageNavBar li:hover {
+    background-color: #D8D8D8;
+  }
+  .PlanetPage .PlanetImage {
+    width: 18.125rem;
+    height: 18.125rem;
+    grid-area: img;
+    transform: translateX(10rem);
+  }
+  .PlanetPage .PlanetSurfaceImage {
+    width: 8.1875rem;
+    height: 10.4375rem;
+    position: absolute;
+    top: 29.5rem;
+    transform: translateX(15rem);
+  }
+  .PlanetPage .Desc {
+    grid-area: desc;
+    width: 21.875rem;
+    margin: 0;
+    margin-top: 7.875rem;
+    justify-self: end;
+  }
+  .PlanetPage .Desc .desc {
+    margin-bottom: 1.5rem;
+  }
+  .PlanetPage .Desc .Source {
+    margin: 0 0 2.4375rem 0;
+  }
+  .PlanetPage .BasicData {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5.4375rem;
+    grid-area: facts;
+  }
+  .PlanetPage .BasicData .Rotation, .PlanetPage .BasicData .Revolution, .PlanetPage .BasicData .Radius, .PlanetPage .BasicData .Temp {
+    padding: 0;
+    width: 15.9375rem;
+    height: 8rem;
+  }
+  .PlanetPage .BasicData .Rotation strong, .PlanetPage .BasicData .Revolution strong, .PlanetPage .BasicData .Radius strong, .PlanetPage .BasicData .Temp strong {
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+  }
 }/*# sourceMappingURL=PlanetPage.css.map */

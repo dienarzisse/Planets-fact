@@ -1,7 +1,7 @@
 @import './variables';
 
 .NavBar{
-    .NarBarConetent{
+    .NarBarContent{
         margin: 1rem 0;
         display: flex;
         justify-content: space-between;
@@ -26,8 +26,77 @@
         }
     }
     hr{
+        width: 100%;
         background: #FFFFFF;
         mix-blend-mode: normal;
         opacity: 0.2;
     }
 }
+
+// Tablet version
+@media screen and (min-width: 768px){
+    .NavBar{
+        .NarBarContent{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .Logo{
+                margin-bottom: 2.4375rem;
+            }
+            .Links{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                // typography
+                font-family: $font-Spartan;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 1.5625rem;
+                letter-spacing: 0.0625rem;
+                text-transform: uppercase;
+                color: $white;
+                div{
+                    cursor: pointer;
+                }
+                div:hover{
+                    color: #419EBB;
+                }
+            }
+        }
+        
+    }
+}
+
+// Desktop version
+@media screen and (min-width: 1440px){
+    .NavBar{
+        .NarBarContent{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .Logo{
+                width: 7.6875rem;
+                font-size: 1.75rem;
+                line-height: 2.25rem;
+                margin-left: 2rem;
+                margin-top: 1.375rem;
+            }
+            .Links{
+                width: fit-content;
+                margin-right: 2rem;
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+            }
+        }
+        hr{
+            margin-top: calc(-3.5rem + 1.6875rem);
+        }
+      min-width: 99vw;
+    }
+  }
+  

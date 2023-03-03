@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;700&family=League+Spartan:wght@400;500;700&display=swap");
-.NavBar .NarBarConetent {
+.NavBar .NarBarContent {
   margin: 1rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.NavBar .NarBarConetent .Logo {
+.NavBar .NarBarContent .Logo {
   font-family: "Antonio", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -15,16 +15,78 @@
   text-transform: uppercase;
   color: #FFFFFF;
 }
-.NavBar .NarBarConetent img {
+.NavBar .NarBarContent img {
   mix-blend-mode: normal;
   opacity: 0.25;
   cursor: pointer;
 }
-.NavBar .NarBarConetent .MenuOpen {
+.NavBar .NarBarContent .MenuOpen {
   opacity: 1;
 }
 .NavBar hr {
+  width: 100%;
   background: #FFFFFF;
   mix-blend-mode: normal;
   opacity: 0.2;
+}
+
+@media screen and (min-width: 768px) {
+  .NavBar .NarBarContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .NavBar .NarBarContent .Logo {
+    margin-bottom: 2.4375rem;
+  }
+  .NavBar .NarBarContent .Links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "League Spartan", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.5625rem;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  .NavBar .NarBarContent .Links div {
+    cursor: pointer;
+  }
+  .NavBar .NarBarContent .Links div:hover {
+    color: #419EBB;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .NavBar {
+    min-width: 99vw;
+  }
+  .NavBar .NarBarContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .NavBar .NarBarContent .Logo {
+    width: 7.6875rem;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    margin-left: 2rem;
+    margin-top: 1.375rem;
+  }
+  .NavBar .NarBarContent .Links {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .NavBar hr {
+    margin-top: -1.8125rem;
+  }
 }/*# sourceMappingURL=NavBar.css.map */

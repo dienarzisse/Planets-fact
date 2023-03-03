@@ -45,22 +45,24 @@ function PlanetPage({Data}){
 
     return(
         <div className="PlanetPage">
-            <div className="PageNavBar">
-                <div onClick={ handleClick } className={ info === 'overview' ? 'ActiveInfo':'' } data-value="overview">overview</div>
-                <div onClick={ handleClick } className={ info === 'structure' ? 'ActiveInfo':'' } data-value="structure">structure</div>
-                <div onClick={ handleClick } className={ info === 'surface' ? 'ActiveInfo':'' } data-value="surface">surface</div>
-            </div>
+            <ol className="PageNavBar">
+                <li onClick={ handleClick } className={ info === 'overview' ? 'ActiveInfo':'' } data-value="overview">overview</li>
+                <li onClick={ handleClick } className={ info === 'structure' ? 'ActiveInfo':'' } data-value="structure">structure</li>
+                <li onClick={ handleClick } className={ info === 'surface' ? 'ActiveInfo':'' } data-value="surface">surface</li>
+            </ol>
             <hr></hr>
-            <div className="Content">
-                <img className={ `PlanetImage` } src={ result[0] } alt="planet"></img>
+            <img className={ `PlanetImage` } src={ result[0] } alt="planet"></img>
                 { result[3] && <img className={ `PlanetSurfaceImage` } src={ result[3] } alt="planet"></img> }
+                <div className="Desc">
                 <h1>{ PlanetName }</h1>
-                <p className="desc">{ result[1] }</p>
-                <div className="Source">
-                    <span>Source: </span>
-                    <a href={ result[2] }>Wikipedia</a>
-                    <img src={ SourceIcon } alt="redirect"></img>
+                    <p className="desc">{ result[1] }</p>
+                    <div className="Source">
+                        <span>Source: </span>
+                        <a href={ result[2] }>Wikipedia</a>
+                        <img src={ SourceIcon } alt="redirect"></img>
+                    </div>
                 </div>
+                
                 <div className="BasicData">
                     <div className="Rotation">
                         <span>Rotation Time</span>
@@ -79,7 +81,6 @@ function PlanetPage({Data}){
                         <strong>{ PlanetTemp }</strong>
                     </div>
                 </div>
-            </div>
             
         </div>
     );
